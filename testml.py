@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
-'''
+
 # 1. 데이터셋 준비하기
 train_datagen = ImageDataGenerator(rescale=1/255, validation_split=0.2, # 검증 데이터 분할 추가
                                    rotation_range=20,                   # 이미지 회전 최대 20도
@@ -60,7 +60,7 @@ model.compile(loss='categorical_crossentropy',
 # 4) 모델 학습시키기
 hist = model.fit(train_generator, epochs=50,
                            validation_data=validation_generator)
-'''
+
 # 모델 저장하기
 #model.save('my_model_final.h5')
 
